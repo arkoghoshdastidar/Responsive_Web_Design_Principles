@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SurveyForm</title>
+    <style>
+        body {
+            margin: 0px;
+            font-family: 'Lobster', cursive;
+            background: #201031;
+            color: hsl(270, 100%, 98%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        header h1 {
+            margin-top: 50px;
+            margin-bottom: 0px;
+        }
+
+        header p {
+            font-size: 20px;
+        }
+
+        #survey-form {
+            margin-top: 35px;
+        }
+
+        form {
+            width: 50%;
+            background-color: white;
+            color: #201031;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 20px 20px 20px;
+            text-align: start;
+            border-radius: 3px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 90%;
+            border-radius: 3px;
+            border: 0;
+            font-size: 15px;
+            line-height: 25px;
+            padding: 5px;
+            background-color: #f2f2f2;
+        }
+
+        label {
+            margin-top: 30px;
+            margin-bottom: 5px;
+            width: 90%;
+            display: block;
+            font-size: 20px
+        }
+
+        #dropdown {
+            width: 90%;
+            border-radius: 3px;
+            border: 0;
+            font-size: 20px;
+            padding-left: 0px;
+        }
+
+        .radio {
+            width: 90%;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .radio label {
+            display: inline;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        .radio input {
+            align-self: center;
+        }
+
+        .relation {
+            width: 20px;
+            align-self: start;
+            margin: 0 0 0 0;
+        }
+
+        [type="submit"] {
+            margin-top: 30px;
+            color: white;
+            background-color: #00b300;
+        }
+
+        textarea {
+            width: 90%;
+            border: 0;
+            border-radius: 3px;
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="title">freeCodeCamp Survey Form</h1>
+        <p id="description"><em>Thank you for taking the time to help us improve the platform</em></p>
+    </header>
+    <form id="survey-form">
+        <label for="name" id="name-label">Name</label>
+        <input type="text" id="name" placeholder="Enter your name here">
+        <label for="email" id="email-label">Email</label>
+        <input type="email" id="email" placeholder="Enter your email here">
+        <label for="age" id="number-label">Age</label>
+        <input type="number" min="20" max="80" id="age" placeholder="Enter your age here">
+        <label for="dropdown" id="dropdown-label">Which option best describes your current role?</label>
+        <select name="dropdown" id="dropdown" value="Student">
+            <option value="student">Student</option>
+            <option value="job">Job</option>
+            <option value="Freelancer">Freelancer</option>
+            <option value="Nill">Prefer not to say!</option>
+        </select>
+        <label>What is your favorite feature of freeCodeCamp?</label>
+        <div class="radio">
+            <input type="radio" id="definitely" name="relation" value="definetely" class="relation">
+            <label for="definitely"> Definitely </label>
+        </div>
+        <div class="radio">
+            <input type="radio" id="Not_Sure" name="relation" value="not_sure" class="relation">
+            <label for="Not_Sure"> Not sure </label>
+        </div>
+        <div class="radio">
+            <input type="radio" id="maybe" name="relation" value="maybe" class="relation">
+            <label for="maybe"> Maybe </label>
+        </div>
+        <label>What would you like to see improved? (Check all that apply)</label>
+        <div class="radio">
+            <input type="checkbox" id="check1" name="check1" value="Front-end-Projects" class="relation">
+            <label for="check1">Front-end Projects</label>
+        </div>
+        <div class="radio">
+            <input type="checkbox" id="check2" name="check2" value="Front-end-Projects" class="relation">
+            <label for="check2">Front-end Projects</label>
+        </div>
+        <div class="radio">
+            <input type="checkbox" id="check1" name="check1" value="Back-end Projects" class="relation">
+            <label for="check1">Back-end Projects</label>
+        </div>
+        <div class="radio">
+            <input type="checkbox" id="check3" name="check3" value="Data Visualization" class="relation">
+            <label for="check3">Data Visualizatio4</label>
+        </div>
+        <div class="radio">
+            <input type="checkbox" id="check4" name="check4" value="Challenges" class="relation">
+            <label for="check4">Challenges</label>
+        </div>
+        <div class="radio">
+            <input type="checkbox" id="check5" name="check5" value="Open Source Community" class="relation">
+            <label for="check5">Open Source Community</label>
+        </div>
+        <div class="radio">
+            <input type="checkbox" id="check6" name="check6" value="Gitter help rooms" class="relation">
+            <label for="check6">Gitter help rooms</label>
+        </div>
+        <div class="radio">
+            <input type="checkbox" id="check7" name="check7" value="Videos" class="relation">
+            <label for="check7">Videos</label>
+        </div>
+        <div class="radio">
+            <input type="checkbox" id="check8" name="check8" value="City Meetups" class="relation">
+            <label for="check8">City Meetups</label>
+        </div>
+        <div class="radio">
+            <input type="checkbox" id="check9" name="check9" value="Wiki" class="relation">
+            <label for="check9">Wiki</label>
+        </div>
+        <div class="radio">
+            <input type="checkbox" id="check10" name="check10" value="Forum" class="relation">
+            <label for="check10">Forum</label>
+        </div>
+        <label for="suggestions">What are your suggestions?</label>
+        <textarea id="suggestions" name="suggestions" rows="10" placeholder="Enter your suggestions here..."></textarea>
+        <input type="submit">
+    </form>
+</body>
+
+</html>
